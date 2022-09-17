@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html:focus-within body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 4.375rem 0.9375rem auto 0.75rem;
+}
+
+.hero h1 {
+  font-family: "PT Serif", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: -0.045em;
+}
+.hero .hero-desc h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  line-height: 1.6875rem;
+  margin-bottom: 0.625rem;
+}
+.hero .hero-desc p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3125rem;
+  margin-bottom: 2.5rem;
+}
+
+.profilegrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(18.75rem, auto);
+}
+.profilegrid .profilegrid-pic {
+  width: 8.75rem;
+  height: auto;
+}
+.profilegrid .profilegrid-pic:nth-child(even) {
+  align-self: end;
+}
+.profilegrid .profilegrid-pic .profilegrid-pic-pos {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.profilegrid .profilegrid-pic .profilegrid-pic-pos img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.625rem;
+}
+.profilegrid .profilegrid-pic .profilegrid-pic-pos .profilegrid-pic-title {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 4.6875rem;
+  top: 3.75rem;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.profilegrid .profilegrid-pic .profilegrid-pic-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}/*# sourceMappingURL=style.css.map */
