@@ -1,0 +1,18 @@
+footer {
+    margin-top: pxrem(250px);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: $normal-font-family;
+    font-size: 0.8rem;
+    color: grey;
+  
+    @include for-desktop-up {
+      margin-top: 25%;
+      font-size: 1rem;
+    }
+  
+    span {
+      font-weight: $weight-bold;
+      color: purple;
+    }
+  }

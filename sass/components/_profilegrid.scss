@@ -1,0 +1,69 @@
+.profilegrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(pxrem(150px), 1fr));
+    grid-auto-rows: minmax(38%, auto);
+    grid-gap: pxrem(25px);
+
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(60%, auto);
+    }
+
+    .profilegrid-pic {
+        width: 85%;
+
+        @include for-tablet-portrait-up {
+          width: 90%;
+          
+          &:nth-last-child(3), &:last-child {
+            align-self: start !important;
+          }
+
+          &:nth-last-child(2) {
+            align-self: end;
+          }
+        }
+
+        &:nth-child(even) {
+            align-self: end;
+        }
+
+
+
+        .profilegrid-pic-pos {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 2%;
+            }
+    
+            .profilegrid-pic-title {
+                font-family: $heading-font-family;
+                font-weight: $weight-regular;
+                font-size: pxrem(10px);
+                text-transform: uppercase;
+                transform: rotate(90deg);
+                position: absolute;
+                left: 55%;
+                top: 32%;
+                width: 100%;
+
+                @include for-tablet-portrait-up {
+                  font-size: pxrem(12px);
+                  line-height: pxrem(16px);
+                }
+            }
+        }
+
+        .profilegrid-pic-name {
+            font-family: $normal-font-family;
+            font-weight: $weight-semibold;
+            font-size: pxrem(14px);
+            line-height: pxrem(21px);
+        }
+    }
+}

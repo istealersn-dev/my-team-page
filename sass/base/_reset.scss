@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; 
+}
+
+.container {
+    margin: pxrem(70px) pxrem(15px) auto pxrem(12px);
+    width: min(95vw, 900px);
+  
+    @include for-tablet-portrait-up {
+      margin: pxrem(110px) auto;
+      width: 80%;
+    }
+  }

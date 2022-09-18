@@ -1,0 +1,44 @@
+.hero {
+
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-direction: row;
+  
+      > * {
+        flex: 5 3;
+      }
+    }
+  
+      h1 {
+      font-family: $heading-font-family;
+      font-size: pxrem(36px);
+      font-weight: $weight-bold;
+      line-height: 3rem;
+      letter-spacing: -0.045em;
+    }
+  
+    .hero-desc {
+      h2 {
+          font-family: $normal-font-family;
+          font-weight: $weight-semibold;
+          font-size: pxrem(18px);
+          text-transform: uppercase;
+          line-height: pxrem(27px);
+          margin-bottom: pxrem(10px);
+      }
+  
+      p {
+          font-family: $normal-font-family;
+          font-size: pxrem(14px);
+          font-weight: $weight-regular;
+          line-height: pxrem(21px);
+          margin-bottom: pxrem(40px);
+  
+          @include for-tablet-portrait-up {
+            font-size: pxrem(18px);
+            line-height: pxrem(27px);
+            width: 75%;
+          }
+      }
+    }
+  }
